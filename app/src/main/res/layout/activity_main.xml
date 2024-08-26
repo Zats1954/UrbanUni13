@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbarMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/toolbar_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_marginEnd="20dp"
+            app:srcCompat="@drawable/ic_exit_to_24"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="input"
+        android:textSize="@dimen/text_size"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"/>
+
+
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="result"
+        android:textSize="@dimen/text_size"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edInput"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="7"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        app:layout_constraintVertical_bias="0.6">
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:text="/"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="1"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:text="2"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:text="3"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btnMlty"
+            android:text="*"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:text="4"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn6"
+            android:text="6"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btnDif"
+            android:text="-"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn7"
+            android:text="7"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn8"
+            android:text="8"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn9"
+            android:text="9"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_height="144dp"
+            android:layout_row="3"
+            android:layout_rowSpan="3"
+            android:layout_column="3"
+            android:text="+"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="180dp"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:text="0"
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btnCalc"
+            android:layout_width="268dp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:text="="
+            android:onClick="OnButtonClick"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="355dp"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:text="reset"
+            android:onClick="OnButtonClick"/>
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

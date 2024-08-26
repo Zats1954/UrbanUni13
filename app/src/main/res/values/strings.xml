@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GridLayout</string>
+    <string name="toolbar_text">Калькулятор</string>
+</resources>
